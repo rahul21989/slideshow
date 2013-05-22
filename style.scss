@@ -5,6 +5,7 @@ $height: 400px;
     overflow: hidden;
     position: absolute;
     height: $height;
+    width: $width;
     #subInnerview {
         transition: transform 2s;
         -webkit-transition: all 2s ease-in-out;
@@ -12,17 +13,18 @@ $height: 400px;
         height: 100%;
         .container {
             height: 100%;
-           float: left;
-           width: $width;
+            float: left;
+            width: $width;
+            top: 0px;
         }
     }
 }
 
 #bMoveLeft, #bMoveRight {
-    top: 410px;
-    left: 100px;
+    top: 450px;
     height: 40px;
     width: 100px;
+    position: absolute;
 }
 
 #bMoveLeft {
@@ -30,5 +32,5 @@ $height: 400px;
 }
 
 #bMoveRight {
-    left: 100px;
+    left: 200px;
 }
