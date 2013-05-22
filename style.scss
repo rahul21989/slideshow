@@ -1,0 +1,34 @@
+$width: 400px;
+$height: 400px;
+#innerview{
+    border: 2px solid;
+    overflow: hidden;
+    position: absolute;
+    height: $height;
+    #subInnerview {
+        transition: transform 2s;
+        -webkit-transition: all 2s ease-in-out;
+        position: absolute;
+        height: 100%;
+        .container {
+            height: 100%;
+           float: left;
+           width: $width;
+        }
+    }
+}
+
+#bMoveLeft, #bMoveRight {
+    top: 410px;
+    left: 100px;
+    height: 40px;
+    width: 100px;
+}
+
+#bMoveLeft {
+    left: 50px;
+}
+
+#bMoveRight {
+    left: 100px;
+}
