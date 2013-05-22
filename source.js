@@ -13,14 +13,4 @@ $(document).ready(function(){
   }
   });
     
-
-    $('#bMoveLeft').click(function() {
-       if(count >-3 && count <= 0) {
-          	--count;
-            var value = 450*count;
-            $('.container').css('-webkit-transform', 'translateX(' + value + 'px)');
-            console.log(count);
-        }
-    });
-    
   });
