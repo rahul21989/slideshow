@@ -7,16 +7,13 @@ $height: 400px;
     height: $height;
     width: $width;
     #subInnerview {
-        transition: transform 2s;
         -webkit-transition: -webkit-transform 2s;
         position: absolute;
         height: 100%;
         .container {
             border-radius:100px;
             box-shadow: 10px 10px 5px #888888;
-            transition:transform 2s ease-in-out;
-            -webkit-transform:rotate(360deg);
-            animation:myfirst 5s;
+            -webkit-transition:-webkit-transform 2s ease-in-out;
             -webkit-animation:myfirst 5s;
             height: 100%;
             float: left;
@@ -27,13 +24,7 @@ $height: 400px;
     }
 }
 
-@keyframes myfirst
-{
-from {background:red;}
-to {background:yellow;}
-}
-
-@-webkit-keyframes myfirst /* Safari and Chrome */
+@-webkit-keyframes myfirst 
 {
 from {background:red;}
 to {background:yellow;}
