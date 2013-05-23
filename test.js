@@ -34,6 +34,7 @@ SlideController.prototype.slideRight = function() {
     ++this.currentlyVisible;
     var value = this.slideWidth*this.currentlyVisible;
     $('#subInnerview').css('-webkit-transform', 'translateX(' + value + 'px)');
+    $('.container').css('-webkit-transform','rotate(180deg)');
 	}
 }
 
