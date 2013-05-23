@@ -10,10 +10,10 @@ $height: 400px;
         transition: transform 2s;
         -webkit-transition: all 2s ease-in-out;
         position: absolute;
+        border-radius:100px;
+        box-shadow: 10px 10px 5px #888888;
         height: 100%;
         .container {
-            border-radius:25px;
-            box-shadow: 10px 10px 5px #888888;
             height: 100%;
             float: left;
             width: $width;
