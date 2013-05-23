@@ -14,7 +14,7 @@ $height: 400px;
             border-radius:100px;
             box-shadow: 10px 10px 5px #888888;
             -webkit-transition:-webkit-transform 2s ease-in-out;
-            -webkit-animation:myfirst 5s;
+            -webkit-animation:myfirst infinite;
             height: 100%;
             float: left;
             width: $width;
