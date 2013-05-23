@@ -8,7 +8,7 @@ $height: 400px;
     width: $width;
     #subInnerview {
         transition: transform 2s;
-        -webkit-transition: all 2s ease-in-out;
+        -webkit-transition: rotate(30deg);
         position: absolute;
         height: 100%;
         .container {
