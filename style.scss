@@ -14,6 +14,8 @@ $height: 400px;
         .container {
             border-radius:100px;
             box-shadow: 10px 10px 5px #888888;
+            transform:rotate(0deg);
+            -webkit-transform:rotate(0deg); 
             height: 100%;
             float: left;
             width: $width;
