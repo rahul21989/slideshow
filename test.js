@@ -34,7 +34,11 @@ SlideController.prototype.slideRight = function() {
     ++this.currentlyVisible;
     var value = this.slideWidth*this.currentlyVisible;
     $('#subInnerview').css('-webkit-transform', 'translateX(' + value + 'px)');
-    $('.container').css('-webkit-transform','rotate(180deg)');
+    $("#subInnerview").bind("webkitTransitionEnd", function() {
+    	$('.container').css('-webkit-transform','rotate(180deg)');
+    });
+
+    
 	}
 }
 
@@ -43,7 +47,9 @@ SlideController.prototype.slideLeft = function() {
    	--this.currentlyVisible;
     var value = this.slideWidth*this.currentlyVisible;
     $('#subInnerview').css('-webkit-transform', 'translateX(' + value + 'px)');
-    $('.container').css('-webkit-transform','rotate(180deg)');
+    $("#subInnerview").bind("webkitTransitionEnd", function() {
+    	$('.container').css('-webkit-transform','rotate(180deg)');
+    });
   }
 }
 
