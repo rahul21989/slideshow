@@ -14,8 +14,9 @@ $height: 400px;
         .container {
             border-radius:100px;
             box-shadow: 10px 10px 5px #888888;
-            transform:transform 10s;
-            -webkit-transform:10s ease-in-out; 
+            transform:rotate(0deg);
+            -webkit-transform:rotate(0deg);
+            -webkit-transform-duration: 2s; 
             animation:myfirst 5s;
             -webkit-animation:myfirst 5s;
             height: 100%;
