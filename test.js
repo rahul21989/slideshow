@@ -45,10 +45,11 @@ SlideController.prototype.slideRight = function() {
 SlideController.prototype.slideLeft = function() {
 	if(this.currentlyVisible  > (1 - this.numSlides) && this.currentlyVisible <= 0) {
    	--this.currentlyVisible;
+   	var currentlyVisible = this.currentlyVisible;
     var value = this.slideWidth*this.currentlyVisible;
     $('#subInnerview').css('-webkit-transform', 'translateX(' + value + 'px)');
     $("#subInnerview").bind("webkitTransitionEnd", function() {
-    	$('.container').css('-webkit-transform','rotate(360deg)');
+    	$('.container:eq(' + currentlyVisible + ')').css('-webkit-transform','rotate(360deg)');
     });
   }
 }
