@@ -14,8 +14,10 @@ $height: 400px;
         .container {
             border-radius:100px;
             box-shadow: 10px 10px 5px #888888;
-            transform:rotate(0deg);
-            -webkit-transform:rotate(0deg); 
+            // transform:rotate(0deg);
+            //-webkit-transform:rotate(0deg); 
+            animation:myfirst 5s;
+            -webkit-animation:myfirst 5s;
             height: 100%;
             float: left;
             width: $width;
@@ -23,6 +25,18 @@ $height: 400px;
 
         }
     }
+}
+
+@keyframes myfirst
+{
+from {background:red;}
+to {background:yellow;}
+}
+
+@-webkit-keyframes myfirst /* Safari and Chrome */
+{
+from {background:red;}
+to {background:yellow;}
 }
 
 #bMoveLeft, #bMoveRight {
