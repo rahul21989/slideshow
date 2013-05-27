@@ -5,16 +5,25 @@
   height: 400px;
   width: 400px; }
   #innerview #subInnerview {
-    transition: transform 2s;
-    -webkit-transition: all 2s ease-in-out;
+    -webkit-transition: -webkit-transform 2s;
     position: absolute;
     height: 100%; }
     #innerview #subInnerview .container {
-      border-radius: 25px;
+      border-radius: 100px;
+      box-shadow: 10px 10px 5px #888888;
+      -webkit-transition: -webkit-transform 2s ease-in-out;
+      -webkit-animation: myfirst infinite;
       height: 100%;
       float: left;
       width: 400px;
       top: 0px; }
+
+@-webkit-keyframes myfirst {
+  from {
+    background: red; }
+
+  to {
+    background: yellow; } }
 
 #bMoveLeft, #bMoveRight {
   top: 450px;
