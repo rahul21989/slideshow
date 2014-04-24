@@ -1,7 +1,9 @@
 #innerview {
+  position: absolute;
+  top: 50px;
+  left: 100px;
   border: 2px solid;
   overflow: hidden;
-  position: absolute;
   height: 400px;
   width: 400px; }
   #innerview #subInnerview {
@@ -12,7 +14,7 @@
       border-radius: 100px;
       box-shadow: 10px 10px 5px #888888;
       -webkit-transition: -webkit-transform 2s ease-in-out;
-      -webkit-animation: myfirst infinite;
+      position: relative;
       height: 100%;
       float: left;
       width: 400px;
@@ -26,13 +28,48 @@
     background: yellow; } }
 
 #bMoveLeft, #bMoveRight {
-  top: 450px;
+  top: 480px;
   height: 40px;
   width: 100px;
   position: absolute; }
 
 #bMoveLeft {
-  left: 50px; }
+  left: 150px; }
 
 #bMoveRight {
-  left: 200px; }
+  left: 300px; }
+
+.container.slide-1 {
+  position: relative;
+ /* -webkit-transition: 0.5s all;
+  -webkit-animation-name:myfirst 2s;*/
+  -webkit-transition: opacity 500ms linear 100ms;
+}
+
+.first_page {
+
+}
+
+.author_name {
+top: 230px;
+position: absolute;
+left: 200px;
+font-size: 20px;
+width: 120px;
+}
+.header{
+font-size: 40px;
+color: rgb(151, 10, 10);
+top: 100px;
+position: absolute;
+left: 125px;
+}
+
+
+.thank_you {
+font-size: 40px;
+color: rgb(151, 10, 10);
+top: 150px;
+position: absolute;
+left: 125px;
+}

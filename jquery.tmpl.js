@@ -5,12 +5,12 @@
  * Dual licensed under the MIT or GPL Version 2 licenses.
  */
 
-function $$(id) {
+/*function $$(id) {
 	// return $(id);
 	var new_id = id.replace(/^#tpl-/, '');  
 	if (typeof(Template[new_id]) == "undefined") alert('undefined ' + new_id);
 	return $(Template[new_id]);
-}
+}*/
 
 (function(jQuery){
 	// Override the DOM manipulation function
@@ -123,7 +123,7 @@ function $$(id) {
 				prefix: "_.push($.encode((typeof $1==='undefined') ? '' : (typeof $1==='function'?$1.call(this):$1)));"
       },
       'partial': {
-        prefix: "_.push($.apply($$($2).html(),$1));"
+        prefix: "_.push($.apply($($2).html(),$1));"
       }
 		},
 

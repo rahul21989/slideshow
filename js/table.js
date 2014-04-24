@@ -22,11 +22,5 @@ TabularForm.prototype.render  = function() {
 	}	
 
 	var html = $('#rows').apply({rows: this.numberOfRows, columns: this.numberOfColumns, data: this.data});
-	$('#table').append(html);
+	return html;
 }
-
-
-$(document).ready(function() {
-	var table = new TabularForm([["First Name", "Last Name"],["Rahul", "Goyal"],["Ram", "Kumar"]]);
-	table.render();
-});

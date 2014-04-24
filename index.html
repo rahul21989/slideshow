@@ -1,0 +1,94 @@
+<html>
+  <head>
+    <script type="text/javascript" src="jquery.js"></script>
+    <script type="text/javascript" src="jquery.tmpl.js"></script>
+    <script type="text/javascript" src="js/slide.js"></script>
+    <script type="text/javascript" src="js/table.js"></script>
+    <script type="text/javascript" src="js/addition.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/style_slide.css">
+    <link rel="stylesheet" type="text/css" href="css/style_table.css">
+    <link rel="stylesheet" type="text/css" href="css/style_addition.css">
+  </head>
+
+  <body>    
+   <div id="innerview">
+    <div id="subInnerview">
+    </div>
+   </div>
+
+    <p>
+      <button id="bMoveLeft">Move left</button>
+      <button id="bMoveRight">Move right</button>
+    </p>
+   
+    <script id = "slides" type="text/x-jquery-tmpl">
+      {{each(i, slide) slides}}
+        <div class="container slide-${i}" style="background-image: -webkit-linear-gradient(top left, rgba(39, 190, 142, 0.39) 0%, rgb(73, 81, 85) 100%);">${slide}</div>
+      {{/each}}
+    </script>
+
+
+    <script id = "content_page" type="text/x-jquery-tmpl">
+      <div class="first_page">
+          <div class="header">Company Name</div>
+          <div class="author_name">Rahul Goyal</div>
+      </div>
+    </script>
+
+
+    <script id = "content_page1" type="text/x-jquery-tmpl">
+      <div class="last_page">
+          <div class="thank_you">Thank You</div>
+      </div>
+    </script>
+    
+    <script id = "rows" type="text/x-jquery-tmpl">
+      <div id="table">
+        {{each(i, row) data}}
+            <div class="table-row row-${i}">
+                {{each(j, column) row}}
+                    <div class="table-cell cell-${j}">
+                       ${column}
+                    </div>
+                {{/each}}
+            </div>
+        {{/each}}
+      </div>  
+    </script>
+
+    <script id = "tpl-addition" type="text/x-jquery-tmpl">
+      <div id="addition-cont">
+        <div id="container">
+          <div id="message">Addition</div>
+          {{each(i, number) numbers}}
+            {{partial("#addition-row") {
+              ind:i, 
+              tens:parseInt(number/10), 
+              ones:number%10, 
+              operator:operator
+            } }} 
+          {{/each}}    
+        </div>
+        <div id="result">
+          {{times(choices.length) i}}
+            <div class="option">${choices[i]}</div>
+          {{/times}}
+        </div>
+      </div> 
+    </script>
+
+
+    <script id="addition-row" type="text/x-jquery-tmpl">
+      <div class="number1">
+        {{if (ind == 0) }}
+          <div class="no-digit"></div>
+        {{else}}
+          <div class="operator">${operator}</div> 
+        {{/if}} 
+        <div class="tens">${tens}</div>
+        <div class="ones">${ones}</div>
+      </div>
+    </script>
+
+  </body>
+</html>

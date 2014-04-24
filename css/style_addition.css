@@ -1,0 +1,83 @@
+#message{
+	text-align: center;
+	font-size: 30px;
+}
+#container{
+	width: 160px;
+	height: 100px;
+	/*top: 100px;
+	left: 125px;*/
+	position: absolute;
+	border-bottom: 2px solid black;
+}
+.number1{
+	text-align: center;
+	-webkit-transition:width 2s, height 2s, background-color 2s, -webkit-transform 2s;
+	/*width: 100px;
+}
+.number2{
+		text-align: center;
+	/*width: 100px;*/
+}
+.no-digit{
+	width: 9px;
+	display: inline-block;
+	margin-right: 10px;
+}
+.operator{
+	display: inline-block;
+	margin-right: 10px;
+}
+.tens{
+	display: inline-block;
+	margin-right: 10px;
+}
+.ones{
+	display: inline-block;
+	margin-right: 10px;
+}
+.add{
+	width: 10px;
+	height: 10px;
+	/*position:absolute;*/
+}
+#result{
+	/*width: 170px;*/
+	
+	margin-top: 10px;
+	height: 30px;
+	top: 100px;
+	width: 100%;
+	position:absolute;
+}
+#addition-cont { 
+	position: absolute;
+	top: 100px;
+	left: 125px;
+	display: block;
+	width: 180px;
+	opacity:0;
+	-webkit-transition:opacity 2s;
+}
+.option{
+	top: 10px;
+	width: 30px;
+	float: left;
+	height: 30px;
+	line-height: 30px;
+	margin-right: 10px;
+	text-align: center;
+	background-color: red;
+	border: 1px solid black;
+	-webkit-transition: -webkit-transform 2s;
+	cursor: hand;
+	/*-webkit-transition:;*/
+}
+
+@-webkit-keyframes wheel1 {
+    0% {
+    }
+    100% {
+        -webkit-transform: translate(200px, 100px);
+    }
+}
