@@ -1,4 +1,4 @@
-slideshow
-=========
+Slides Presentation Using Javascript
 
-test
+
+Run index.html in browser
